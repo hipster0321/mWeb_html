@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>home</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.0/progressbar.min.js"
+      integrity="sha512-Hivnqo7w/SRPjJY3qvD8Y1CaKbmrmqDjZKYgIFyIag/2bOye6Qk1W99wZYObixwzYoZQeKWPqZ2ifus82GE07A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jquery3.2.1.js"></script>
+  </head>
+  <body>
+    <!-- [D] = To Developer -->
+    <div class="c-container">
+      <div class="l-main">
+        <div class="c-section">
+          <div class="main-top">
+            <p class="cl-white">5월은 이만큼 더 벌었어요 :)</p>
+            <p class="main-top-price">2,317,600원</p>
+            <!-- [D] 기본 급여 대상자 일시 block -->
+            <!-- <p class="main-top-price">기본 급여 대상</p> -->
+          </div>
+          <div class="main-top-btnbox -mt-10">
+            <ul class="btnbox-ul">
+              <li class="btnbox-list">
+                <!-- 08_AddParcer_my_empty 이동 -->
+                <a href="#" class="btnbox-list-anchor">
+                  <i class="icon">
+                    <img src="./images/icon-car.svg" alt="" />
+                  </i>
+                  <span class="btn-txt fw-m">집배송 추가</span>
+                </a>
+              </li>
+              <li class="btnbox-list">
+                <!-- 05_SearchParcer_01_01 이동 -->
+                <a href="#" class="btnbox-list-anchor">
+                  <i class="icon">
+                    <img src="./images/icon-waybill.svg" alt="" />
+                  </i>
+                  <span class="btn-txt fw-m">운송장 조회</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <div class="box-top">
+            <div class="section-title">
+              <i class="icon -mr-2">
+                <img src="./images/icon-title-warning.svg" alt="" />
+              </i>
+              <h4 class="h4">긴급 확인 사항</h4>
+            </div>
+            <!-- 06_Notification_02 이동 -->
+            <a href="#" class="title-link">전체보기</a>
+          </div>
+          <div class="c-box">
+            <ul class="warningbox-ul">
+              <li class="warningbox">
+                <div class="img-box">
+                  <img src="http://placehold.it/48x48" src="" />
+                </div>
+                <div class="info-wrap">
+                  <em class="flag">미해결</em>
+                  <em class="flag-time">5분</em>
+                  <p class="fw-m -mt-8">
+                    역삼로길 15 강남 아파트인데 배송언제 되냐고 문의 왔습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="warningbox">
+                <div class="img-box">
+                  <img src="http://placehold.it/48x48" src="" />
+                </div>
+                <div class="info-wrap">
+                  <em class="flag">미해결</em>
+                  <em class="flag-time">5분</em>
+                  <p class="fw-m -mt-8">
+                    역삼로길 15 강남 아파트인데 배송언제 되냐고 문의 왔습니다.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <!-- Modal_calendar open -->
+          <button role="button" class="c-btn-main">
+            <i class="icon -mr-10">
+              <img src="./images/icon-btn-calender.svg" alt="" />
+            </i>
+            <span class="cl-white fw-b h3">22년 5월 업무 및 성과</span>
+          </button>
+        </div>
+
+        <div class="c-section">
+          <div class="box-top">
+            <div class="section-title">
+              <i class="icon -mr-2">
+                <img src="./images/icon-title-statistics.svg" alt="" />
+              </i>
+              <h4 class="h4">통계</h4>
+            </div>
+          </div>
+          <div class="c-box">
+            <div class="statistics-box">
+              <div class="flag-up"><span>3%</span></div>
+              <span class="statistics-subtxt fw-m">5월 추가 배송 수익금</span>
+              <p class="statistics-price">2,317,600<span>원</span></p>
+            </div>
+          </div>
+          <div class="c-box">
+            <div class="statistics-box">
+              <div class="flag-down">578건</div>
+              <span class="statistics-subtxt fw-m">5월 추가 배송 수익금</span>
+              <p class="statistics-price">1,397<span>건</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <div class="box-top">
+            <div class="section-title">
+              <i class="icon -mr-2">
+                <img src="./images/icon-title-check.svg" alt="" />
+              </i>
+              <h4 class="h4">업무 현황</h4>
+            </div>
+          </div>
+          <div class="c-box">
+            <div class="progress-wrap">
+              <div id="container"></div>
+              <div class="progressbar-info">
+                <span class="amount-txt">현재 배송량</span>
+                <!-- [D] 배송량 텍스트 -->
+                <h4 class="amount-num">3,825건</h4>
+                <!-- [D] 배송량 Max 텍스트 -->
+                <p class="amount-max">목표 배송량 5,500건</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <div class="box-top">
+            <div class="section-title">
+              <i class="icon -mr-2">
+                <img src="./images/icon-title-delivery.svg" alt="" />
+              </i>
+              <h4 class="h4">배송 현황</h4>
+            </div>
+          </div>
+          <div class="c-box">
+            <div class="delivery-wrap">
+              <ul class="delivery-ul">
+                <li class="delivery-li">
+                  <span class="delivery-title 1">배송</span>
+                  <!-- [D] value, min, max 조정 -->
+                  <progress
+                    class="delivery-progress"
+                    value="1267"
+                    min="0"
+                    max="1500"
+                  ></progress>
+                  <span class="delivery-value">1,267</span>
+                </li>
+                <li class="delivery-li">
+                  <span class="delivery-title">집하</span>
+                  <progress
+                    class="delivery-progress"
+                    value="595"
+                    min="0"
+                    max="1500"
+                  ></progress>
+                  <span class="delivery-value 2">595</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-section">
+          <div class="box-top">
+            <div class="section-title">
+              <i class="icon -mr-2">
+                <img src="./images/icon-title-chart.svg" alt="" />
+              </i>
+              <h4 class="h4">5주차 일별 집배송량</h4>
+            </div>
+          </div>
+          <div class="c-box">
+            <!-- chart area -->
+            <div class="chart-wrap">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var bar = new ProgressBar.SemiCircle(container, {
+      strokeWidth: 10,
+      easing: "easeInOut",
+      duration: 1400,
+      color: "url(#gradient)",
+      trailColor: "rgba(217, 217, 217, 0.5);",
+      trailWidth: 6,
+      svgStyle: null,
+      max: 5500, // [D] max 설정
+    });
+
+    bar.animate(3825 / 5500); // [D] value / max 설정
+
+    let linearGradient = `
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+          <stop offset="6%" stop-color="#14e585"/>
+          <stop offset="182%" stop-color="#01b763"/>
+        </linearGradient>
+      </defs>
+    `;
+
+    bar.svg.insertAdjacentHTML("afterBegin", linearGradient);
+  </script>
+  <script>
+    $(".delivery-progress").each(function () {
+      const i = $(this);
+      const valueText = i.next(".delivery-value");
+      const value = (this.value / this.max) * 100 - 102;
+      valueText.css("right", -value + "%");
+    });
+  </script>
+  <script>
+    const ctx = document.getElementById("myChart");
+
+    const data = [157, 356, 150, 108, 210, 527, 0]; // [D] 요일 별 data 설정
+    const maxDataValue = Math.max(...data);
+
+    new Chart(ctx, {
+      type: "bar",
+      legend: false,
+      data: {
+        labels: ["월", "화", "수", "목", "금", "토", "일"],
+        datasets: [
+          {
+            label: null,
+            fill: false,
+            data: data,
+            borderWidth: 0,
+            borderRadius: 50,
+            barThickness: 30,
+            backgroundColor: data.map((value) =>
+              value === maxDataValue ? "#01b763" : "rgba(1, 183, 99, 0.5)"
+            ),
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            display: false,
+            beginAtZero: false,
+            lineWidth: 0,
+            min: 0,
+            max: 600, // [D] max
+            grid: {
+              display: false,
+              drawBorder: false,
+            },
+          },
+          x: {
+            // display: false,
+            offset: true,
+            grid: {
+              display: false,
+              lineWidth: 0,
+            },
+            min: 0,
+            max: 600, // [D] max
+          },
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+  </script>
+</html>
