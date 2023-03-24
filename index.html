@@ -196,12 +196,41 @@
               </i>
               <h4 class="h4">5주차 일별 집배송량</h4>
             </div>
+            <div class="chart-btn-wrap">
+              <!-- [D] 마지막 주차 일 시 disabled class 추가 -->
+              <div class="chart-btn prev"></div>
+              <div class="chart-btn next disabled"></div>
+            </div>
           </div>
           <div class="c-box">
             <!-- chart area -->
             <div class="chart-wrap">
               <canvas id="myChart"></canvas>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="layer"></div>
+      <div class="modal-content">
+        <div class="modal-inner">
+          <div class="modal-title">
+            <h2 class="fw-b h2">연월을 선택해주세요.</h2>
+          </div>
+          <div class="modal-body">
+            <div class="calendar-wrap">
+              <div class="calendar-month">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="" />
+                    <label for=""></label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-btn-wrap">
+            <button class="modal-confirm">선택</button>
+            <button class="modal-close">닫기</button>
           </div>
         </div>
       </div>
