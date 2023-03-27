@@ -351,14 +351,15 @@ svg {
 }
 .modal-content {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 40px);
+  min-width: 320px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 44px;
-  padding: 0 20px;
   display: none;
+  z-index: 1050;
 }
 .modal-inner {
   padding: 40px 32px 32px;
@@ -404,13 +405,18 @@ svg {
 }
 .calendar-ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100%;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.calendar-ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .calendar-ul .calendar-list {
+  display: inline-flex;
   text-align: center;
 }
 .calendar-ul .calendar-list + .calendar-list {
@@ -438,9 +444,10 @@ svg {
   font-weight: 700;
   color: #01b763;
 }
+.calendar-year .calendar-ul {
+  justify-content: center;
+  align-items: center;
+}
 .calendar-month {
   padding-top: 52px;
-}
-.calendar-month .calendar-ul {
-  padding: 0 5%;
 }

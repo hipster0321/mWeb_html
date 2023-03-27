@@ -94,7 +94,7 @@
 
         <div class="c-section">
           <!-- Modal_calendar open -->
-          <button role="button" class="c-btn-main">
+          <button role="button" class="c-btn-main" onclick=openModal()>
             <i class="icon -mr-10">
               <img src="./images/icon-btn-calender.svg" alt="" />
             </i>
@@ -297,8 +297,8 @@
             </div>
           </div>
           <div class="modal-btn-wrap">
-            <button class="modal-confirm">선택</button>
-            <button class="modal-close">닫기</button>
+            <button class="modal-confirm" onclick=confirmBtn()>선택</button>
+            <button class="modal-close" onclick=closeModal()>닫기</button>
           </div>
         </div>
       </div>
@@ -336,6 +336,22 @@
       const value = (this.value / this.max) * 100 - 102;
       valueText.css("right", -value + "%");
     });
+
+    const openModal = () => {
+      $('.modal-content').show();
+      $('.layer').show();
+    }
+    const closeModal = () => {
+      $('.modal-content').hide();
+      $('.layer').hide();
+    }
+
+    // [D] 선택 btn
+    const confirmBtn = () => {
+      $('.modal-content').hide();
+      $('.layer').hide();
+    }
+
   </script>
   <script>
     const ctx = document.getElementById("myChart");
