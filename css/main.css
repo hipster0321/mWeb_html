@@ -545,7 +545,9 @@ svg {
     font-size: 16px;
     flex: 1;
 }
-
+.tab-button.active{
+    color: #01b763;
+}
 .tab-button.active::after {
     content: '';
     position: absolute;
