@@ -640,3 +640,6 @@ svg {
     line-height: 22px;
     color: rgba(38, 38, 38, 0.5);
 }
+.exception-box.not-revenue {
+    margin-top: 69px;
+}
