@@ -453,6 +453,9 @@ svg {
 }
 
 /***** 수익_Phase-02 *****/
+.l-phase {
+  padding-bottom: 40px;
+}
 .slider-area {
     padding: 20px 20px 0 20px;
 }
@@ -642,4 +645,7 @@ svg {
 }
 .exception-box.not-revenue {
     margin-top: 69px;
+}
+.exception-box.basic-salary {
+  margin-top: 220px;
 }
