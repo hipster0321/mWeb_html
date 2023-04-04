@@ -94,7 +94,7 @@
 
         <div class="c-section">
           <!-- Modal_calendar open -->
-          <button role="button" class="c-btn-main" onclick=openModal()>
+          <button role="button" class="c-btn-main" onclick="openModal()">
             <i class="icon -mr-10">
               <img src="./images/icon-btn-calender.svg" alt="" />
             </i>
@@ -231,7 +231,7 @@
                     <label for="year02">19년</label>
                   </li>
                   <li class="calendar-list">
-                    <input type="radio" id="year03" name="years" />
+                    <input type="radio" id="year03 name="years" />
                     <label for="year03">20년</label>
                   </li>
                   <li class="calendar-list">
@@ -299,8 +299,8 @@
             </div>
           </div>
           <div class="modal-btn-wrap">
-            <button class="modal-confirm" onclick=confirmBtn()>선택</button>
-            <button class="modal-close" onclick=closeModal()>닫기</button>
+            <button class="modal-confirm" onclick="confirmBtn()">선택</button>
+            <button class="modal-close" onclick="closeModal()">닫기</button>
           </div>
         </div>
       </div>
@@ -335,25 +335,27 @@
     $(".delivery-progress").each(function () {
       const i = $(this);
       const valueText = i.next(".delivery-value");
+      const valueTextTwo = i.next(".delivery-value.2");
       const value = (this.value / this.max) * 100 - 102;
+      const valueTwo = (this.value / this.max) * 100 - 96;
       valueText.css("right", -value + "%");
+      valueTextTwo.css("right", -valueTwo + "%");
     });
 
     const openModal = () => {
-      $('.modal-content').show();
-      $('.layer').show();
-    }
+      $(".modal-content").show();
+      $(".layer").show();
+    };
     const closeModal = () => {
-      $('.modal-content').hide();
-      $('.layer').hide();
-    }
+      $(".modal-content").hide();
+      $(".layer").hide();
+    };
 
     // [D] 선택 btn
     const confirmBtn = () => {
-      $('.modal-content').hide();
-      $('.layer').hide();
-    }
-
+      $(".modal-content").hide();
+      $(".layer").hide();
+    };
   </script>
   <script>
     const ctx = document.getElementById("myChart");
