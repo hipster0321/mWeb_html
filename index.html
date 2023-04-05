@@ -335,11 +335,11 @@
     $(".delivery-progress").each(function () {
       const i = $(this);
       const valueText = i.next(".delivery-value");
-      const valueTextTwo = i.next(".delivery-value.2");
+      // const valueTextTwo = i.next(".delivery-value.2");
       const value = (this.value / this.max) * 100 - 102;
-      const valueTwo = (this.value / this.max) * 100 - 96;
+      // const valueTwo = (this.value / this.max) * 100 - 96;
       valueText.css("right", -value + "%");
-      valueTextTwo.css("right", -valueTwo + "%");
+      // valueTextTwo.css("right", -valueTwo + "%");
     });
 
     const openModal = () => {
